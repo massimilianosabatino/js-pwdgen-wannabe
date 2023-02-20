@@ -4,18 +4,24 @@
     box-sizing: border-box;
 }
 
-
+/*
+*  Page style
+*/
 main {
     margin: 4rem;
     padding: 3.125rem;
     background-color: lightgrey;
 }
 
+/* Title */
 main > h1 {
     text-align: center;
     margin-bottom: 2.5rem;
 }
 
+/*
+*  Password fields
+*/
 .container {
     display: flex;
     justify-content: space-between;
@@ -44,14 +50,15 @@ main > h1 {
 }
 
 .container > .-ms-password-field,
-.container > .-ms-password-field-alternative {
-    flex: 0 1 0%;
+.container  .-ms-password-field-alternative {
+    /* se attivo su chrome va a capo la password - solo campo nascosto */
+    /* flex: 0 0 0%; */
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-
-.alternative-trigger:active + .mr-hide {
+/* Alternative password field beaviur and style */
+.alternative-trigger:focus-within + .mr-hide {
     display: flex;
 }
 
