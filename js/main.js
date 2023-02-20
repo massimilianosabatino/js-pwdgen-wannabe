@@ -10,3 +10,6 @@ let passwordGenerated = `${userName}${userSurname}${userColor}${passwordClassNum
 // Output in console
 console.log(passwordGenerated);
 
+// Output in pagina
+document.querySelector('.-ms-password-field').innerHTML = passwordGenerated;
+
