@@ -5,18 +5,45 @@
 }
 
 /*
+*  Typo
+*/
+h1 {
+    font-weight: 700;
+}
+
+p {
+    font-weight: 300;
+}
+
+/*
 *  Page style
 */
+body {
+    height: 100vh;
+    background-color: lavender;
+    font-family: 'Lexend Exa', sans-serif;
+}
 main {
-    margin: 4rem;
+    margin: 0 auto;
     padding: 3.125rem;
-    background-color: lightgrey;
+    width: 70%;
+    background-color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, .2);
 }
 
 /* Title */
 main > h1 {
     text-align: center;
-    margin-bottom: 2.5rem;
+    border-bottom: 1px solid rgb(64, 0, 193);
+    border-radius: 1px;
+    padding-bottom: 3.125rem;
+    margin-bottom: 3.125rem;
+    color: rgb(64, 0, 193);
 }
 
 /*
@@ -26,13 +53,13 @@ main > h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid grey;
+    border: 1px solid rgb(64, 0, 193);
     border-radius: 10px;
     padding: 2.5rem;
     border-left: none;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
-    background: linear-gradient(to right, lightgrey 5%, grey);
+    box-shadow: 4px 0px 4px 0px rgba(54, 0, 163, .1);
     width: fit-content;
 }
 
@@ -41,7 +68,7 @@ main > h1 {
 }
 
 .container:hover {
-    background: linear-gradient(to right, lightgrey 70%, grey);
+    box-shadow: 10px 0px 10px 0px rgba(54, 0, 163, .1);
 }
 
 .container > p {
@@ -54,10 +81,15 @@ main > h1 {
     /* se attivo su chrome va a capo la password - solo campo nascosto */
     /* flex: 0 0 0%; */
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
+    color: rgb(50, 50, 50);
 }
 
 /* Alternative password field beaviur and style */
+.alternative-trigger {
+    font-weight: 300;
+}
+
 .alternative-trigger:focus-within + .mr-hide {
     display: flex;
 }
@@ -70,4 +102,11 @@ main > h1 {
 button {
     padding: .3125rem;
     margin-left: .3125rem;
+    background-color:white;
+    border: 1px solid rgb(64, 0, 193);
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: rgb(229, 234, 250);
 }
