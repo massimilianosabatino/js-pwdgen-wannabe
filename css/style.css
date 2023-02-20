@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 main {
     margin: 4rem;
     padding: 3.125rem;
@@ -29,13 +30,37 @@ main > h1 {
     width: fit-content;
 }
 
+.container:not(:last-child) {
+    margin-bottom: 2.5rem;
+}
+
+.container:hover {
+    background: linear-gradient(to right, lightgrey 70%, grey);
+}
+
 .container > p {
     flex: 1 1 0%;
     padding-right: 1.25rem;
 }
 
-.container > .-ms-password-field {
+.container > .-ms-password-field,
+.container > .-ms-password-field-alternative {
     flex: 0 1 0%;
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+
+.alternative-trigger:active + .mr-hide {
+    display: flex;
+}
+
+.mr-hide {
+    display: none;
+    margin-top: 1.5rem;
+}
+
+button {
+    padding: .3125rem;
+    margin-left: .3125rem;
 }

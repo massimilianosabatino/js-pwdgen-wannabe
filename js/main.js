@@ -13,3 +13,13 @@ console.log(passwordGenerated);
 // Output in pagina
 document.querySelector('.-ms-password-field').innerHTML = passwordGenerated;
 
+// Aggiunta alternative di password
+/* Definizione nuova variabile */
+passwordGeneratedAlternative = passwordGenerated + '-2023';
+
+//Output in pagina
+document.getElementById('alternative-password').innerHTML = passwordGeneratedAlternative;
+
+// Output in console
+console.log(passwordGeneratedAlternative);
+
